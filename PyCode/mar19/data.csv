@@ -1,0 +1,17 @@
+date,time,temperature,humidity,wind,description
+Tue,11:30,33,15,NW 6 km/h ,Partly Cloudy
+Tue,12:00,34,14,W 7 km/h ,Partly Cloudy
+Tue,13:00,35,13,WSW 9 km/h ,Partly Cloudy
+Tue,14:00,36,12,WSW 10 km/h ,Partly Cloudy
+Tue,15:00,36,11,W 12 km/h ,Partly Cloudy
+Tue,16:00,36,11,W 13 km/h ,Partly Cloudy
+Tue,17:00,36,12,W 14 km/h ,Partly Cloudy
+Tue,18:00,34,15,W 13 km/h ,Mostly Sunny
+Tue,19:30,30,24,W 11 km/h ,Clear
+Tue,20:30,28,27,W 9 km/h ,Clear
+Tue,21:30,27,29,W 8 km/h ,Clear
+Tue,22:30,26,30,WSW 7 km/h ,Clear
+Tue,23:30,25,32,WSW 6 km/h ,Clear
+Wed,00:30,24,33,WSW 5 km/h ,Clear
+Wed,01:30,23,37,WSW 5 km/h ,Clear
+Wed,02:30,22,37,WSW 5 km/h ,Clear

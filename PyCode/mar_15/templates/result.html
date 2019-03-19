@@ -1,0 +1,186 @@
+{% extends "layout.html" %}
+
+    {% block content %}
+
+    <!--<div class="fluid">-->
+    <div class="container">
+        <h1>Result</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Temperatures</h2>
+
+                <div class="col-md-2">
+                    <ul class="list-group">
+                        {% for temp in temperatures %}
+                            <li class="list-group-item">{{temp}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="col-md-10">
+                    <img src="{{temperatureFile}}" alt="" class="img-thumbnail">
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <h2>Revenue</h2>
+
+                <div class="col-md-2">
+                    <ul class="list-group">
+                        {% for revenue in revenues %}
+                            <li class="list-group-item">{{revenue}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="col-md-10">
+                    <img src="{{revenueFile}}" alt="" class="img-thumbnail">
+                </div>
+
+            </div>
+        </div>
+
+        <hr/>
+
+        <h2>Person Info</h2>
+        <div>Name: {{personInfo.name}}</div>
+        <div>Address: {{personInfo.address}}</div>
+        <div>Phone: {{personInfo.phone}}</div>
+
+        <hr/>
+
+        <h2>Products</h2>
+
+        <div class="row"> <!-- 12 columns -->
+            <div class="col-md-6">
+                <h3>List</h3>
+
+                <ul class="list-group">
+                    {% for product in products %}
+                        <li class="list-group-item">{{product.title}}, {{product.price}}, {{product.description}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h3>Table</h3>
+
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        {% for product in products %}
+                            <tr>
+                                <td>{{product.title}}</td>
+                                <td>{{product.description}}</td>
+                                <td>{{product.price}}</td>
+                            </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <hr/>
+
+        <h2>Products</h2>
+        <!--
+        <ul class="list-group">
+            <li class="list-group-item">item 1</li>
+            <li class="list-group-item">item 2</li>
+            <li class="list-group-item">item 3</li>
+            <li class="list-group-item">item 4</li>
+        </ul>
+
+        <ul class="list-group">
+            <li class="list-group-item">{{products[0].title}}, {{products[0].price}}, {{products[0].description}}</li>
+            <li class="list-group-item">{{products[1].title}}, {{products[1].price}}, {{products[1].description}}</li>
+            <li class="list-group-item">{{products[2].title}}, {{products[2].price}}, {{products[2].description}}</li>
+            <li class="list-group-item">{{products[3].title}}, {{products[3].price}}, {{products[3].description}}</li>
+            <li class="list-group-item">{{products[4].title}}, {{products[4].price}}, {{products[4].description}}</li>
+        </ul>
+        -->
+
+        <ul class="list-group">
+            {% for product in products %}
+                <li class="list-group-item">{{product.title}}, {{product.price}}, {{product.description}}</li>
+            {% endfor %}
+        </ul>
+
+        <hr/>
+
+        <h2>Products</h2>
+
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for product in products %}
+                    <tr>
+                        <td>{{product.title}}</td>
+                        <td>{{product.description}}</td>
+                        <td>{{product.price}}</td>
+                    </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+
+        <!--
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>product 1</td>
+                    <td>nice product 1</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>product 1</td>
+                    <td>nice product 1</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>product 1</td>
+                    <td>nice product 1</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>product 1</td>
+                    <td>nice product 1</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>product 1</td>
+                    <td>nice product 1</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+        -->
+    </div>
+
+    {% endblock content %}
